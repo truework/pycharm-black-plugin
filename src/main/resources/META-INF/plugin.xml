@@ -1,0 +1,28 @@
+<idea-plugin>
+    <id>com.truework.pycharm-black-plugin</id>
+    <name>Black</name>
+    <vendor email="support@truework.com" url="http://www.truework.com">Truework</vendor>
+
+    <description><![CDATA[ Runs the [black](https://github.com/psf/black) Python formatter on the open file. ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.python</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="com.truework.pycharm-black-plugin" class="FormatPythonBlack" text="Blacken"
+                description="Format the current file using Python Black">
+            <keyboard-shortcut keymap="$default" first-keystroke="shift alt F"/>
+        </action>
+    </actions>
+</idea-plugin>
